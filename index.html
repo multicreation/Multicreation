@@ -1,0 +1,1903 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff7f2">
+<meta name="description" content="Beautiful handmade pipe-cleaner flower bouquets made with love. Shop ready-made bouquets or customize your own — order easily on WhatsApp.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B7%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Handmade ♡ Bouquets | Made With Love">
+<meta property="og:description" content="Beautiful handmade pipe-cleaner flower bouquets made for birthdays, gifts and tiny moments worth keeping.">
+<meta property="og:image" content="catalogue.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Handmade ♡ Bouquets | Made With Love">
+<meta name="twitter:description" content="Beautiful handmade pipe-cleaner flower bouquets made with love.">
+<title>Handmade ♡ Bouquets | Made With Love</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Handmade Bouquets",
+  "description": "Handmade pipe-cleaner flower bouquets, made to order and customizable.",
+  "image": "catalogue.jpg",
+  "priceRange": "₹99-₹349",
+  "sameAs": ["https://www.instagram.com/_multicreation.07_/"]
+}
+</script>
+<style>
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  background:var(--rose);
+  color:#fff;
+  padding:12px 18px;
+  border-radius:0 0 12px 0;
+  z-index:1000;
+  font-weight:700;
+}
+.skip-link:focus{
+  left:0;
+  top:0;
+}
+:focus-visible{
+  outline:2px solid var(--rose-dark);
+  outline-offset:2px;
+}
+.visually-hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+.field-error{
+  color:var(--rose-dark);
+  font-size:12px;
+  font-weight:700;
+  margin:-8px 0 4px;
+  min-height:16px;
+}
+input.invalid,textarea.invalid,select.invalid{
+  border-color:#c0475a;
+  box-shadow:0 0 0 4px rgba(192,71,90,.12);
+}
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:90px;
+  transform:translate(-50%,12px);
+  background:var(--ink);
+  color:#fff;
+  padding:11px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+  z-index:300;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease;
+}
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+.qty-stepper{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:4px;
+}
+.qty-stepper button{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+  font-weight:800;
+  line-height:1;
+}
+.qty-stepper button:hover{
+  border-color:var(--rose2);
+  color:var(--rose);
+}
+.faq{
+  display:grid;
+  gap:10px;
+}
+.faq details{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px 18px;
+}
+.faq summary{
+  cursor:pointer;
+  font-weight:700;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+.faq summary::-webkit-details-marker{
+  display:none;
+}
+.faq summary:after{
+  content:"+";
+  font-size:20px;
+  color:var(--rose);
+  transition:transform .2s ease;
+}
+.faq details[open] summary:after{
+  transform:rotate(45deg);
+}
+.faq p{
+  margin:10px 0 0;
+  color:var(--muted);
+  line-height:1.6;
+  font-size:14px;
+}
+:root{
+  --cream:#fff7f2;
+  --paper:#fffdfb;
+  --white:#fff;
+  --ink:#332426;
+  --muted:#806d69;
+  --rose:#b95768;
+  --rose-dark:#984957;
+  --rose2:#e9a9b3;
+  --pink:#f8dce1;
+  --line:#eadbd4;
+  --green:#708b69;
+  --shadow:0 14px 40px rgba(75,42,42,.09);
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:80px;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 10% 5%,rgba(233,169,179,.16),transparent 25%),
+    var(--cream);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,input,select,textarea{
+  font:inherit;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,247,242,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(234,219,212,.8);
+}
+
+.nav{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:21px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--rose);
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.navlinks a{
+  position:relative;
+  transition:.25s ease;
+}
+
+.navlinks a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:2px;
+  border-radius:10px;
+  background:var(--rose);
+  transition:.25s ease;
+}
+
+.navlinks a:hover{
+  color:var(--rose);
+}
+
+.navlinks a:hover:after{
+  width:100%;
+}
+
+.mobile-menu{
+  display:none;
+  border:1px solid var(--line);
+  background:white;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:20px;
+}
+
+.mobile-nav{
+  display:none;
+  padding:0 0 15px;
+}
+
+.mobile-nav.open{
+  display:grid;
+  gap:4px;
+}
+
+.mobile-nav a{
+  padding:12px 14px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.mobile-nav a:hover{
+  background:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:72px 0 55px;
+  overflow:hidden;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  gap:45px;
+  align-items:center;
+}
+
+.hero-copy{
+  animation:fadeUp .75s ease both;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 14px;
+  border:1px solid var(--rose2);
+  border-radius:999px;
+  color:var(--rose);
+  font-size:13px;
+  font-weight:700;
+  background:rgba(255,255,255,.78);
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(44px,6vw,76px);
+  line-height:.96;
+  letter-spacing:-2px;
+  margin:19px 0;
+}
+
+.hero h1 span{
+  color:var(--rose);
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.75;
+  max-width:570px;
+  margin-bottom:25px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  border:0;
+  border-radius:999px;
+  padding:13px 19px;
+  font-weight:750;
+  cursor:pointer;
+  font-size:14px;
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    background .22s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--rose);
+  color:white;
+  box-shadow:0 9px 24px rgba(185,87,104,.22);
+}
+
+.btn-primary:hover{
+  background:var(--rose-dark);
+  box-shadow:0 13px 28px rgba(185,87,104,.28);
+}
+
+.btn-light{
+  background:white;
+  border:1px solid var(--line);
+}
+
+.btn-light:hover{
+  box-shadow:var(--shadow);
+}
+
+.instagram-btn{
+  margin-top:12px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--ink);
+}
+
+.hero-img{
+  position:relative;
+  background:white;
+  border:1px solid var(--line);
+  padding:10px;
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(80,50,40,.13);
+  animation:heroFloat 5s ease-in-out infinite;
+}
+
+.hero-img:before{
+  content:"♡";
+  position:absolute;
+  right:-12px;
+  top:-15px;
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--rose);
+  color:white;
+  font-size:22px;
+  z-index:2;
+  box-shadow:0 10px 25px rgba(185,87,104,.25);
+}
+
+.hero-img img{
+  width:100%;
+  display:block;
+  border-radius:19px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+  padding:55px 0;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin-bottom:24px;
+}
+
+.section h2{
+  font-family:Georgia,serif;
+  font-size:35px;
+  letter-spacing:-.5px;
+  margin:0;
+}
+
+.section-head p{
+  margin:6px 0 0;
+  color:var(--muted);
+}
+
+/* ================= PRODUCT CARDS ================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.card{
+  position:relative;
+  background:rgba(255,253,251,.94);
+  border:1px solid var(--line);
+  border-radius:21px;
+  padding:17px;
+  box-shadow:0 8px 28px rgba(80,50,40,.05);
+  overflow:hidden;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+  animation:cardIn .65s ease both;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 20px 42px rgba(80,50,40,.12);
+  border-color:var(--rose2);
+}
+
+.card:nth-child(2){animation-delay:.04s}
+.card:nth-child(3){animation-delay:.08s}
+.card:nth-child(4){animation-delay:.12s}
+.card:nth-child(5){animation-delay:.16s}
+.card:nth-child(6){animation-delay:.20s}
+
+.card-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  z-index:2;
+  padding:6px 9px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.3px;
+  background:white;
+  color:var(--rose);
+  border:1px solid var(--rose2);
+  box-shadow:0 5px 15px rgba(50,30,30,.08);
+}
+
+.card-badge.best{
+  background:var(--rose);
+  color:white;
+  border-color:var(--rose);
+}
+
+.flower{
+  height:140px;
+  border-radius:17px;
+  background:
+    radial-gradient(circle at 30% 20%,#fff 0 5%,transparent 6%),
+    linear-gradient(135deg,#fff0ed,#f4eefb);
+  display:grid;
+  place-items:center;
+  font-size:67px;
+  transition:transform .3s ease;
+}
+
+.card:hover .flower{
+  transform:scale(1.035);
+}
+
+.card h3{
+  margin:14px 0 5px;
+  font-family:Georgia,serif;
+  font-size:20px;
+}
+
+.price-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:3px;
+}
+
+.price{
+  font-size:20px;
+  font-weight:850;
+  color:var(--rose);
+}
+
+.card small{
+  display:block;
+  color:var(--muted);
+  margin:5px 0 14px;
+  min-height:18px;
+  line-height:1.4;
+}
+
+.card button{
+  width:100%;
+}
+
+/* ================= TRUST STRIP ================= */
+
+.trust{
+  padding:8px 0 25px;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.trust-item{
+  background:rgba(255,255,255,.65);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:15px;
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.trust-item strong{
+  display:block;
+  color:var(--ink);
+  margin-bottom:3px;
+}
+
+/* ================= CATALOGUE ================= */
+
+.catalogue{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:25px;
+  padding:10px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.catalogue img{
+  width:100%;
+  display:block;
+  border-radius:17px;
+}
+
+/* ================= CUSTOM ================= */
+
+.custom{
+  position:relative;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(255,255,255,.7),transparent 30%),
+    #f6eae7;
+  border:1px solid #ead7d0;
+  border-radius:28px;
+  padding:34px;
+  overflow:hidden;
+}
+
+.custom:after{
+  content:"🌷";
+  position:absolute;
+  right:25px;
+  bottom:-10px;
+  font-size:70px;
+  opacity:.12;
+}
+
+.custom h2{
+  font-family:Georgia,serif;
+  font-size:31px;
+  margin:0;
+}
+
+.custom > p{
+  color:var(--muted);
+  line-height:1.6;
+  max-width:680px;
+}
+
+.form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  margin-top:20px;
+  position:relative;
+  z-index:1;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px 14px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:white;
+  color:var(--ink);
+  outline:none;
+  transition:.2s ease;
+}
+
+input:focus,select:focus,textarea:focus{
+  border-color:var(--rose2);
+  box-shadow:0 0 0 4px rgba(233,169,179,.14);
+}
+
+textarea{
+  min-height:105px;
+  resize:vertical;
+  grid-column:1/-1;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+/* ================= INFO ================= */
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.info-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:19px;
+  padding:23px;
+  transition:.25s ease;
+}
+
+.info-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.info-icon{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.info-card b{
+  display:block;
+  margin-bottom:7px;
+}
+
+.info-card p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.55;
+  font-size:14px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  margin-top:25px;
+  padding:45px 0 90px;
+  background:#332426;
+  color:#f9e9e5;
+  text-align:center;
+}
+
+.footer-brand{
+  font-family:Georgia,serif;
+  font-size:25px;
+  margin-bottom:9px;
+}
+
+.footer-brand span{
+  color:#e9a9b3;
+}
+
+.footer-text{
+  color:#cdbab5;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.footer-social{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:17px;
+  padding:10px 15px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  color:#fff;
+  transition:.2s ease;
+}
+
+.footer-social:hover{
+  background:rgba(255,255,255,.08);
+  transform:translateY(-2px);
+}
+
+/* ================= CART ================= */
+
+.cart{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  align-items:center;
+  background:var(--ink);
+  color:#fff;
+  padding:13px 17px;
+  border-radius:999px;
+  border:0;
+  font-weight:800;
+  box-shadow:0 12px 35px rgba(0,0,0,.22);
+  cursor:pointer;
+  z-index:90;
+  transition:.25s ease;
+}
+
+.cart:hover{
+  transform:translateY(-3px);
+  box-shadow:0 17px 40px rgba(0,0,0,.27);
+}
+
+#count{
+  background:var(--rose);
+  padding:2px 7px;
+  min-width:22px;
+  text-align:center;
+  border-radius:999px;
+  margin-left:6px;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(30,20,20,.55);
+  backdrop-filter:blur(5px);
+  z-index:200;
+  align-items:end;
+  justify-content:center;
+}
+
+.modal.open{
+  display:flex;
+  animation:modalFade .2s ease both;
+}
+
+.sheet{
+  background:var(--cream);
+  width:min(580px,100%);
+  max-height:88vh;
+  overflow:auto;
+  border-radius:27px 27px 0 0;
+  padding:26px;
+  box-shadow:0 -15px 50px rgba(0,0,0,.15);
+  animation:sheetUp .3s ease both;
+}
+
+.sheet-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.close{
+  border:0;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:50%;
+  width:38px;
+  height:38px;
+  cursor:pointer;
+  font-size:20px;
+  transition:.2s ease;
+}
+
+.close:hover{
+  transform:rotate(90deg);
+}
+
+.cart-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.cart-item-name{
+  font-weight:650;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  font-size:20px;
+  font-weight:850;
+  margin:20px 0;
+}
+
+.empty-cart{
+  padding:20px 0;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes cardIn{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+
+@keyframes modalFade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes sheetUp{
+  from{transform:translateY(30px);opacity:.7}
+  to{transform:translateY(0);opacity:1}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:780px){
+
+  .nav{
+    min-height:64px;
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:block;
+  }
+
+  .hero{
+    padding:48px 0 35px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .hero-copy{
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-actions{
+    justify-content:center;
+  }
+
+  .hero-img{
+    max-width:650px;
+    margin:auto;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .info{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:43px 0;
+  }
+}
+
+@media(max-width:470px){
+
+  .container{
+    width:94%;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  h1{
+    font-size:47px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-actions .btn{
+    flex:1;
+  }
+
+  .section h2{
+    font-size:29px;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .card{
+    padding:11px;
+    border-radius:17px;
+  }
+
+  .flower{
+    height:105px;
+    font-size:51px;
+  }
+
+  .card h3{
+    font-size:16px;
+    line-height:1.25;
+  }
+
+  .card small{
+    font-size:11px;
+    min-height:31px;
+  }
+
+  .price{
+    font-size:17px;
+  }
+
+  .card .btn{
+    padding:10px 7px;
+    font-size:12px;
+  }
+
+  .card-badge{
+    top:8px;
+    left:8px;
+    font-size:9px;
+    padding:5px 7px;
+  }
+
+  .custom{
+    padding:25px 18px;
+  }
+
+  .form{
+    grid-template-columns:1fr;
+  }
+
+  textarea,.full{
+    grid-column:1;
+  }
+
+  .cart{
+    right:12px;
+    bottom:12px;
+  }
+
+  .sheet{
+    padding:22px 18px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *:before,
+  *:after{
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+}
+</style></head><body><a class="skip-link" href="#main">Skip to content</a><header>
+  <div class="container nav"><a class="logo" href="#">
+  Handmade <span>♡</span> Bouquets
+</a>
+
+<nav class="navlinks">
+  <a href="#shop">Shop</a>
+  <a href="#custom">Customize</a>
+  <a href="#catalogue">Catalogue</a>
+  <a href="#order">Why handmade?</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<button class="mobile-menu" onclick="toggleMobileNav()" aria-label="Open menu">
+  ☰
+</button>
+
+  </div>  <div class="container mobile-nav" id="mobileNav">
+    <a href="#shop" onclick="closeMobileNav()">🌸 Shop bouquets</a>
+    <a href="#custom" onclick="closeMobileNav()">🎀 Customize</a>
+    <a href="#catalogue" onclick="closeMobileNav()">📖 Catalogue</a>
+    <a href="#order" onclick="closeMobileNav()">♡ Why handmade?</a>
+    <a href="#faq" onclick="closeMobileNav()">❓ FAQ</a>
+  </div>
+</header><main id="main"><!-- HERO --><section class="hero">
+  <div class="container hero-grid"><div class="hero-copy">
+
+  <span class="badge">
+    🌸 Handmade with love
+  </span>
+
+  <h1>
+    Flowers that<br>
+    <span>stay special.</span>
+  </h1>
+
+  <p>
+    Beautiful handmade pipe-cleaner flower bouquets, made for
+    birthdays, gifts, surprises and tiny moments worth keeping.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#shop">
+      🌷 Shop bouquets
+    </a>
+
+    <a class="btn btn-light" href="#custom">
+      🎀 Customize
+    </a>
+  </div>
+
+  <a
+    class="btn instagram-btn"
+    href="https://www.instagram.com/_multicreation.07_/"
+    target="_blank"
+    rel="noopener"
+  >
+    📸 Follow us on Instagram
+  </a>
+
+</div>
+
+<div class="hero-img">
+  <img
+    src="catalogue.jpg"
+    alt="Handmade pipe-cleaner flower bouquet catalogue"
+    fetchpriority="high"
+    decoding="async"
+  >
+</div>
+
+  </div>
+</section><!-- TRUST --><section class="trust">
+  <div class="container trust-grid"><div class="trust-item">
+  <strong>🌸 100% Handmade</strong>
+  Made with care
+</div>
+
+<div class="trust-item">
+  <strong>🎀 Customizable</strong>
+  Make it personal
+</div>
+
+<div class="trust-item">
+  <strong>💬 Easy Ordering</strong>
+  Order through WhatsApp
+</div>
+
+  </div>
+</section><!-- SHOP --><section class="section" id="shop">
+  <div class="container"><div class="section-head">
+  <div>
+    <h2>Our bouquets</h2>
+    <p>Pick your favourite, then order on WhatsApp.</p>
+  </div>
+</div>
+
+<div class="grid" id="products"></div>
+
+  </div>
+</section><!-- CATALOGUE --><section class="section" id="catalogue">
+  <div class="container"><div class="section-head">
+  <div>
+    <h2>Full catalogue</h2>
+    <p>All designs and prices from our current catalogue.</p>
+  </div>
+</div>
+
+<div class="catalogue">
+  <img
+    src="catalogue.jpg"
+    alt="Full handmade flower bouquet catalogue with all designs and prices"
+    loading="lazy"
+    decoding="async"
+  >
+</div>
+
+  </div>
+</section><!-- CUSTOM --><section class="section" id="custom">
+  <div class="container"><div class="custom">
+
+  <h2>Make it yours 🌷</h2>
+
+  <p>
+    Choose a bouquet and tell us what you'd like changed.
+    We'll confirm the final design and price on WhatsApp.
+  </p>
+
+  <form class="form" novalidate onsubmit="event.preventDefault();customOrder();">
+
+    <div>
+      <label class="visually-hidden" for="cname">Your name</label>
+      <input
+        id="cname"
+        name="cname"
+        placeholder="Your name"
+        autocomplete="name"
+        required
+      >
+      <div class="field-error" id="cname-error"></div>
+    </div>
+
+    <div>
+      <label class="visually-hidden" for="cphone">Phone number</label>
+      <input
+        id="cphone"
+        name="cphone"
+        placeholder="Phone number"
+        inputmode="tel"
+        autocomplete="tel"
+        required
+      >
+      <div class="field-error" id="cphone-error"></div>
+    </div>
+
+    <div>
+      <label class="visually-hidden" for="cproduct">Choose a bouquet</label>
+      <select id="cproduct" name="cproduct" required>
+        <option value="">Select a bouquet</option>
+      </select>
+      <div class="field-error" id="cproduct-error"></div>
+    </div>
+
+    <div>
+      <label class="visually-hidden" for="cribbon">Ribbon / wrapping preference</label>
+      <input
+        id="cribbon"
+        name="cribbon"
+        placeholder="Ribbon / wrapping preference"
+      >
+    </div>
+
+    <div class="full">
+      <label class="visually-hidden" for="cnote">Customization or message card text</label>
+      <textarea
+        id="cnote"
+        name="cnote"
+        placeholder="Customization or message card text"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary full"
+    >
+      💌 Send customization request
+    </button>
+
+  </form>
+
+</div>
+
+  </div>
+</section><!-- WHY HANDMADE --><section class="section" id="order">
+  <div class="container"><div class="section-head">
+  <div>
+    <h2>Why handmade?</h2>
+    <p>A little bouquet with a lot of personality.</p>
+  </div>
+</div>
+
+<div class="info">
+
+  <div class="info-card">
+    <div class="info-icon">🌸</div>
+    <b>Handmade</b>
+    <p>
+      Every bouquet is made by hand and can be customized.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <div class="info-icon">🎀</div>
+    <b>Custom wrapping</b>
+    <p>
+      Ask for your preferred wrapping and ribbon style.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <div class="info-icon">💬</div>
+    <b>Easy ordering</b>
+    <p>
+      Add items to your cart and send the order straight to WhatsApp.
+    </p>
+  </div>
+
+</div>
+
+  </div>
+</section><!-- FAQ --><section class="section" id="faq">
+  <div class="container"><div class="section-head">
+  <div>
+    <h2>Questions, answered</h2>
+    <p>Everything you need to know before ordering.</p>
+  </div>
+</div>
+
+<div class="faq">
+
+  <details>
+    <summary>How long does a bouquet take to make?</summary>
+    <p>Each bouquet is handmade to order. Message us on WhatsApp with your preferred date and we'll confirm a timeline before you order.</p>
+  </details>
+
+  <details>
+    <summary>Can I mix flowers that aren't listed together?</summary>
+    <p>Yes — use the "Make it yours" form to describe the combination, colors and wrapping you'd like, and we'll confirm the design and price on WhatsApp.</p>
+  </details>
+
+  <details>
+    <summary>How do I pay?</summary>
+    <p>Add your bouquets to the cart or fill out the customization form, then confirm your order and payment details directly with us on WhatsApp.</p>
+  </details>
+
+  <details>
+    <summary>Do the bouquets last?</summary>
+    <p>Since they're handmade from pipe cleaners rather than fresh flowers, they don't wilt — they're meant to be kept as a lasting gift.</p>
+  </details>
+
+</div>
+
+  </div>
+</section></main><!-- FOOTER --><footer>  <div class="container"><div class="footer-brand">
+  Handmade <span>♡</span> Bouquets
+</div>
+
+<div class="footer-text">
+  Made with patience, flowers and a little love 🌷<br>
+  Handmade gifts for moments worth remembering.
+</div>
+
+<a
+  class="footer-social"
+  href="https://www.instagram.com/_multicreation.07_/"
+  target="_blank"
+  rel="noopener"
+>
+  📸 @_multicreation.07_
+</a>
+
+<div
+  style="margin-top:20px;font-size:11px;color:#a9928d"
+>
+  © Handmade Bouquets • Made With Love ♡
+</div>
+
+  </div></footer><!-- CART BUTTON --><button class="cart" onclick="openCart()" aria-label="Open shopping cart">
+  🛒 Cart
+  <span id="count" aria-live="polite">0</span>
+</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><!-- CART MODAL --><div
+  class="modal"
+  id="modal"
+  onclick="if(event.target===this)closeCart()"
+>  <div class="sheet"><div class="sheet-head">
+
+  <h2 style="font-family:Georgia,serif;margin:0">
+    Your cart 🛒
+  </h2>
+
+  <button
+    class="close"
+    onclick="closeCart()"
+    aria-label="Close cart"
+  >
+    ×
+  </button>
+
+</div>
+
+<div
+  id="cartItems"
+  style="margin-top:12px"
+></div>
+
+<div class="total">
+  <span>Total</span>
+  <span id="total">₹0</span>
+</div>
+
+<label class="visually-hidden" for="buyerName">Your name</label>
+<input
+  id="buyerName"
+  placeholder="Your name"
+  autocomplete="name"
+  required
+  style="margin-bottom:4px"
+>
+<div class="field-error" id="buyerName-error"></div>
+
+<label class="visually-hidden" for="buyerAddress">Delivery address</label>
+<textarea
+  id="buyerAddress"
+  placeholder="Delivery address"
+  autocomplete="street-address"
+  required
+></textarea>
+<div class="field-error" id="buyerAddress-error"></div>
+
+<button
+  class="btn btn-primary"
+  style="width:100%;margin-top:10px"
+  onclick="sendOrder()"
+>
+  💚 Order on WhatsApp
+</button>
+
+<p
+  style="
+    font-size:12px;
+    color:var(--muted);
+    text-align:center;
+    margin-bottom:0
+  "
+>
+  Your order details will open directly in WhatsApp.
+</p>
+
+  </div></div><script>
+
+/* =====================================================
+   WHATSAPP NUMBER
+   KEPT EXACTLY THE SAME
+===================================================== */
+
+const WHATSAPP_NUMBER = "919524307861";
+
+
+/* =====================================================
+   PRODUCTS
+   ORIGINAL PRODUCTS + PRICES KEPT INTACT
+===================================================== */
+
+const products = [
+  ["Sunflower",99,"🌻"],
+  ["Rose",120,"🌹"],
+  ["Lily",99,"🌷"],
+  ["Lavender",99,"💜"],
+  ["Daisy",99,"🌼"],
+
+  ["Tulip + Daisy",199,"🌷"],
+  ["Tulip + Sunflower",199,"🌻"],
+  ["Tulip + Lavender",199,"💜"],
+
+  ["Rose + Tulip",249,"🌹"],
+  ["Tulip + Lily + Daisy",199,"🌷"],
+  ["Lily + Tulip + Daisy",299,"🌸"],
+
+  ["Sunflower + Tulip + Daisy",299,"🌻"],
+  ["Purple Daisy + Tulip + Lavender",299,"💜"],
+
+  ["Rose + Tulip + Daisy",349,"🌹"],
+  ["Tulip + Lily + Lavender",299,"🌷"]
+];
+
+
+let cart=[];
+
+
+/* =====================================================
+   PRODUCT BADGES
+===================================================== */
+
+const popularProducts = [
+  "Sunflower",
+  "Rose",
+  "Tulip + Daisy"
+];
+
+const bestSellerProducts = [
+  "Rose + Tulip + Daisy",
+  "Lily + Tulip + Daisy"
+];
+
+
+/* =====================================================
+   RENDER PRODUCTS
+===================================================== */
+
+function renderProducts(){
+
+  const el=document.getElementById("products");
+  const sel=document.getElementById("cproduct");
+
+  el.innerHTML="";
+  sel.innerHTML='<option value="">Select a bouquet</option>';
+
+  products.forEach((p,i)=>{
+
+    let badge="";
+
+    if(bestSellerProducts.includes(p[0])){
+      badge='<span class="card-badge best">BEST SELLER</span>';
+    }
+    else if(popularProducts.includes(p[0])){
+      badge='<span class="card-badge">POPULAR</span>';
+    }
+
+    el.innerHTML += `
+
+      <article class="card">
+
+        ${badge}
+
+        <div class="flower">
+          ${p[2]}
+        </div>
+
+        <h3>
+          ${i+1}. ${p[0]}
+        </h3>
+
+        <small>
+          Handmade bouquet • customizable
+        </small>
+
+        <div class="price-row">
+          <div class="price">₹${p[1]}</div>
+        </div>
+
+        <button
+          class="btn btn-primary"
+          style="margin-top:12px"
+          onclick="addToCart(${i})"
+        >
+          Add to cart
+        </button>
+
+      </article>
+
+    `;
+
+    sel.innerHTML += `
+      <option value="${p[0]} - ₹${p[1]}">
+        ${p[0]} - ₹${p[1]}
+      </option>
+    `;
+
+  });
+
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+let toastTimer=null;
+
+function showToast(msg){
+
+  const t=document.getElementById("toast");
+
+  t.textContent=msg;
+  t.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer=setTimeout(()=>{
+    t.classList.remove("show");
+  },1800);
+
+}
+
+
+function addToCart(i){
+
+  cart.push(i);
+
+  updateCart();
+
+  if(document.getElementById("modal").classList.contains("open")){
+    showToast(`${products[i][0]} added to cart`);
+  }else{
+    openCart();
+  }
+
+}
+
+
+function changeQty(index,delta){
+
+  if(delta>0){
+    cart.push(index);
+  }else{
+    let pos=cart.indexOf(index);
+    if(pos>-1) cart.splice(pos,1);
+  }
+
+  updateCart();
+
+}
+
+
+function removeFromCart(index){
+
+  cart.splice(index,1);
+
+  updateCart();
+
+}
+
+
+function updateCart(){
+
+  document.getElementById("count").textContent=cart.length;
+
+  let groups={};
+
+  cart.forEach(i=>{
+    groups[i]=(groups[i]||0)+1;
+  });
+
+  let html="";
+
+  Object.keys(groups).forEach(i=>{
+
+    let p=products[i];
+    let q=groups[i];
+
+    html += `
+
+      <div class="cart-item">
+
+        <div>
+
+          <div class="cart-item-name">
+            ${p[2]} ${p[0]}
+          </div>
+
+          <div class="qty-stepper">
+            <button type="button" aria-label="Remove one ${p[0]}" onclick="changeQty(${i},-1)">−</button>
+            <span>${q}</span>
+            <button type="button" aria-label="Add one more ${p[0]}" onclick="changeQty(${i},1)">+</button>
+          </div>
+
+        </div>
+
+        <b>
+          ₹${p[1]*q}
+        </b>
+
+      </div>
+
+    `;
+
+  });
+
+  document.getElementById("cartItems").innerHTML =
+    html ||
+    '<div class="empty-cart">🌸 Your cart is empty.<br>Add a bouquet to get started.</div>';
+
+  document.getElementById("total").textContent =
+    "₹"+cart.reduce(
+      (s,i)=>s+products[i][1],
+      0
+    );
+
+}
+
+
+function openCart(){
+
+  document
+    .getElementById("modal")
+    .classList.add("open");
+
+  updateCart();
+
+  document.body.style.overflow="hidden";
+
+}
+
+
+function closeCart(){
+
+  document
+    .getElementById("modal")
+    .classList.remove("open");
+
+  document.body.style.overflow="";
+
+}
+
+
+/* =====================================================
+   WHATSAPP ORDER
+   ORIGINAL ORDER SYSTEM PRESERVED
+===================================================== */
+
+function setFieldError(id,message){
+
+  const input=document.getElementById(id);
+  const error=document.getElementById(id+"-error");
+
+  if(input) input.classList.toggle("invalid",!!message);
+  if(error) error.textContent=message||"";
+
+  return !message;
+
+}
+
+
+function sendOrder(){
+
+  if(!cart.length){
+
+    showToast("Add at least one bouquet first");
+
+    return;
+
+  }
+
+  let name=
+    document
+      .getElementById("buyerName")
+      .value
+      .trim();
+
+  let address=
+    document
+      .getElementById("buyerAddress")
+      .value
+      .trim();
+
+  let nameOk=setFieldError("buyerName",name?"":"Please add your name");
+  let addressOk=setFieldError("buyerAddress",address?"":"Please add a delivery address");
+
+  if(!nameOk||!addressOk) return;
+
+  let groups={};
+
+  cart.forEach(i=>{
+    groups[i]=(groups[i]||0)+1;
+  });
+
+  let lines=
+    Object.keys(groups).map(i=>{
+
+      return `${products[i][0]} x${groups[i]} = ₹${products[i][1]*groups[i]}`;
+
+    });
+
+  let total=
+    cart.reduce(
+      (s,i)=>s+products[i][1],
+      0
+    );
+
+  let msg=
+    `Hello! I'd like to order:%0A%0A`+
+    `${encodeURIComponent(lines.join("\n"))}`+
+    `%0A%0ATotal: ₹${total}`+
+    `%0AName: ${encodeURIComponent(name)}`+
+    `%0AAddress: ${encodeURIComponent(address)}`;
+
+  if(WHATSAPP_NUMBER.includes("X")){
+
+    alert(
+      "Add your WhatsApp number in the WHATSAPP_NUMBER setting inside index.html first."
+    );
+
+    return;
+
+  }
+
+  window.open(
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,
+    "_blank"
+  );
+
+}
+
+
+/* =====================================================
+   CUSTOM ORDER
+   ORIGINAL SYSTEM PRESERVED
+===================================================== */
+
+function customOrder(){
+
+  let name=
+    document
+      .getElementById("cname")
+      .value
+      .trim();
+
+  let phone=
+    document
+      .getElementById("cphone")
+      .value
+      .trim();
+
+  let product=
+    document
+      .getElementById("cproduct")
+      .value;
+
+  let ribbon=
+    document
+      .getElementById("cribbon")
+      .value
+      .trim();
+
+  let note=
+    document
+      .getElementById("cnote")
+      .value
+      .trim();
+
+  let nameOk=setFieldError("cname",name?"":"Please add your name");
+  let phoneOk=setFieldError("cphone",phone?"":"Please add a phone number");
+  let productOk=setFieldError("cproduct",product?"":"Please choose a bouquet");
+
+  if(!nameOk||!phoneOk||!productOk) return;
+
+  if(WHATSAPP_NUMBER.includes("X")){
+
+    alert(
+      "Add your WhatsApp number in the WHATSAPP_NUMBER setting inside index.html first."
+    );
+
+    return;
+
+  }
+
+  let msg=
+    `Hello! I'd like a customized bouquet.`+
+    `%0AName: ${encodeURIComponent(name)}`+
+    `%0APhone: ${encodeURIComponent(phone)}`+
+    `%0ABouquet: ${encodeURIComponent(product)}`+
+    `%0ARibbon/wrapping: ${encodeURIComponent(ribbon)}`+
+    `%0AMessage/notes: ${encodeURIComponent(note)}`;
+
+  window.open(
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,
+    "_blank"
+  );
+
+}
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+function toggleMobileNav(){
+
+  document
+    .getElementById("mobileNav")
+    .classList.toggle("open");
+
+}
+
+
+function closeMobileNav(){
+
+  document
+    .getElementById("mobileNav")
+    .classList.remove("open");
+
+}
+
+
+/* =====================================================
+   ESC KEY
+===================================================== */
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+
+    closeCart();
+    closeMobileNav();
+
+  }
+
+});
+
+
+/* =====================================================
+   LIVE-CLEAR VALIDATION ERRORS
+===================================================== */
+
+document.addEventListener("input",function(e){
+
+  if(e.target && e.target.id){
+    setFieldError(e.target.id,"");
+  }
+
+});
+
+
+/* =====================================================
+   START
+===================================================== */
+
+renderProducts();
+updateCart();
+
+</script></body>
+</html>
